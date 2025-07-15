@@ -33,12 +33,19 @@ Stroke Volume = VTI× (Cross-sectional area of the outflow tract)
 
 <img src="/imgs/images.jpg" alt="VTI graph" title="This is a regular VTI image/plot." width="900">
 
-
 Formula to Convert Pixels to Time
+
                     Time per pixel=1/(Sweep Speed × Pixels per mm)
-Total Time=Waveform Width in Pixels×Time per Pixel
+
+*Sweep Speed on an echocardiograph (or echocardiogram machine) refers to the rate at
+which the ultrasound images or waveforms (especially M-mode and Doppler) are displayed across the screen.
+
+####                Total Time=Waveform Width in Pixels×Time per Pixel
 
 # Flow
+<div style="text-align: center;">
+ <img width="400" height="496" alt="image" src="https://github.com/user-attachments/assets/e86a0a9e-323c-4d8d-9ba4-b51d9f75fcc0" />
+</div>
 
 VTI Shot uses a pipeline, with 3 blocks, at the head of which in the first block is a fine-tuned YOLOv5,
 which is specifically trained to detect the plots in a given input image. Once the model generates the

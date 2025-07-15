@@ -31,12 +31,11 @@ Stroke Volume = VTI× (Cross-sectional area of the outflow tract)
 - Aortic and Pulmonary valve evaluation.
 - Monitoring heart function in critically ill patients.
 
-<img src="/imgs/images.jpg" alt="VTI graph" title="This is a regular VTI image/plot." width="1000">
+<img src="/imgs/images.jpg" alt="VTI graph" title="This is a regular VTI image/plot." width="900">
+
 
 Formula to Convert Pixels to Time
                     Time per pixel=1/(Sweep Speed × Pixels per mm)
-                    Time per pixel= Sweep Speed×Pixels per mm
-
 Total Time=Waveform Width in Pixels×Time per Pixel
 
 # Flow

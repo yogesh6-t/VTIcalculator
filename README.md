@@ -25,7 +25,7 @@ Stroke Volume = VTI× (Cross-sectional area of the outflow tract)
 - Aortic and Pulmonary valve evaluation.
 - Monitoring heart function in critically ill patients.
 
-Traditionally VTI calculations were made by the echo-cardiograph machine operator using
+Traditionally VTI calculations are made by the echo-cardiograph machine operator using
 pointer(stylus) where they manually trace the frozen frame from the doppler plot and the machine
 does the calculation based on the plot, this feature is only present in the high-end, state of
 the art echocardiograph machines. Most of the time the operators make a assumption/guess, where

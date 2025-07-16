@@ -1,5 +1,3 @@
-# VTIcalculator
-
 # VTI Shot
 VTIShot is a AI powered python utility which enables a user to calculate VTI in a single step.
 

@@ -3,17 +3,11 @@
 # VTI Shot
 VTIShot is a AI powered python utility which enables a user to calculate VTI in a single step.
 
-Traditionally VTI calculations were made by the echo-cardiograph machine operator using
-pointer(stylus) where they manually trace the frozen frame from the doppler plot and the machine
-does the calculation based on the plot, which is a rare occurring, most of the time the operators
-do a assumption, where they see the Vmax and give an assumption based on the time period of a
-regular systolic waveform time-period.
-
 VTI stands for : Velocity Time Integral. It’s a measurement used in echocardiography (ultrasound
 of the heart) to quantify the distance that blood travels through a specific part of the heart
 during one heartbeat.
 
- What VTI Measures:
+ What VTI Measures:
 VTI represents the area under the curve of a Doppler waveform. It essentially integrates (adds 
 up) the blood velocity over time during one cardiac cycle.
 
@@ -26,10 +20,17 @@ Stroke Volume (SV): how much blood the heart pumps in one beat.
 Cardiac Output (CO): how much blood the heart pumps per minute.
 Formula:
 Stroke Volume = VTI× (Cross-sectional area of the outflow tract)
- Common VTI Applications:
+ Common VTI Applications:
 - Left Ventricular Outflow Tract (LVOT) VTI → assess left ventricular function.
 - Aortic and Pulmonary valve evaluation.
 - Monitoring heart function in critically ill patients.
+
+Traditionally VTI calculations were made by the echo-cardiograph machine operator using
+pointer(stylus) where they manually trace the frozen frame from the doppler plot and the machine
+does the calculation based on the plot, this feature is only present in the high-end, state of
+the art echocardiograph machines. Most of the time the operators make a assumption/guess, where
+Vmax and based on the time period of a regular systolic waveform time-period, approximately
+0.3 secs VTI is vaguely rounded off to  ~(60-65)% of Vmax*time period.
 
 <img src="/imgs/images.jpg" alt="VTI graph" title="This is a regular VTI image/plot." width="900">
 
@@ -39,13 +40,15 @@ Formula to Convert Pixels to Time
 
 *Sweep Speed on an echocardiograph (or echocardiogram machine) refers to the rate at
 which the ultrasound images or waveforms (especially M-mode and Doppler) are displayed across the screen.
+Time axis is scaled and time is calculater based on sweep speed, width in pixels and screen resolution. 
 
-####                Total Time=Waveform Width in Pixels×Time per Pixel
+####                Total Time=Waveform Width in Pixels×Time per Pixel
 
 # Flow
 <div style="text-align: center;">
- <img width="400" height="496" alt="image" src="https://github.com/user-attachments/assets/e86a0a9e-323c-4d8d-9ba4-b51d9f75fcc0" />
+ <img width="400" height="496" alt="image" src="https://github.com/user-attachments/assets/e86a0a9e-323c-4d8d-9ba4-b51d9f75fcc0" />
 </div>
+
 
 VTI Shot uses a pipeline, with 3 blocks, at the head of which in the first block is a fine-tuned YOLOv5,
 which is specifically trained to detect the plots in a given input image. Once the model generates the
